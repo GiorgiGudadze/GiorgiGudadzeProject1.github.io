@@ -57,7 +57,8 @@ function menuShrink (){
 		menuDiv.find(".arrow-top").css({"transform":"translateY(0%)","transition-delay":"1.2s","opacity":"1"});
 		$(".fragment").stop().animate({"opacity":"1"});
 		
-		$("header").css({"border-bottom":"4px solid #006DA5","transition":"0"});	
+		$("header").css({"border-bottom":"4px solid #006DA5","transition":"0s"});
+		$(".white-stick").css("top","53px");	
 	},10)
 	windowWidth = window.innerWidth;
 	$(".logo-title").children().removeClass("active");
@@ -116,6 +117,7 @@ if (currentScroll>prev || currentScroll>0) {
 		})
 		$(".logo-title").children().addClass("active").css("transition-delay","1s");
 		$(".logo-title-below").children().addClass("active").css("transition-delay","1s");
+		$(".white-stick").css("top","57px");
 	 },300)
 
 }
@@ -193,7 +195,7 @@ $(window).scroll(function(){
 })
 var adresses = $(".address-container").clone().css("display","block");
 if ($(window).width()<1024){
-
+	$(".white-stick").css("top","31.5px");
 	adresses.appendTo(".footer-information");
 	if(window.pageYOffset>0){
 		$("header").css({"border-bottom":"rgba(0, 109, 165,1) solid"})
@@ -208,7 +210,9 @@ if ($(window).width()<1024){
 
 window.addEventListener('resize',function(){
 
-	if(window.innerWidth<1024){ 
+	if(window.innerWidth<1024){
+		$("header").css({"transition":"1s"});
+		$(".white-stick").css("top","31.5px");
 		   adresses.appendTo(".footer-information");
 		   menuDiv.find("#empty").css("transition-delay","1.2s");
 		   menuDiv.css({"opacity":"0"});
@@ -258,6 +262,7 @@ window.addEventListener('resize',function(){
 		
 		
 		else{
+			$(".menu-below").css({"opacity":"1"});
 			adresses.remove();
 			var currentScroll = $(window).scrollTop();
 			var prev = window.pageYOffset;
@@ -265,7 +270,7 @@ window.addEventListener('resize',function(){
 			$("header").removeClass("open");
 			$(".menu-below").removeClass("open");
 			$(".main-2").removeClass("open");
-
+			$(".white-stick").css("top","57px");
 				if(currentScroll>0){
 					
 					$(".menu-show").css("opacity","1 !important");
@@ -300,6 +305,7 @@ window.addEventListener('resize',function(){
 		})
 		$(".logo-title").children().addClass("active");
 		$(".logo-title-below").children().addClass("active");
+		$(".white-stick").css("top","57px");
 	 },300)
 
 }

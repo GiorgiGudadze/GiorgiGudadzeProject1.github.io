@@ -129,7 +129,15 @@ transform: translateY(0);
 	bottom: 13.5px;
 	overflow: hidden;
 }
-
+.white-stick{
+	position: absolute;
+    top: 57px;
+    left: 0;
+    width: 15px;
+    height: 7px;
+	background: #fff;
+	transition:0.5s;
+}
 @keyframes arrowRight{
 	
 	from{clip-path: polygon(0 0%, 0% 100%, 0% 100%, 0 100%)}
@@ -317,6 +325,7 @@ box-shadow: 10px 10px 8px #00A8E7,
 	padding-bottom:18px;
 	transition: 1s;
 	cursor: pointer;
+	position: relative;
 }
 .menu-up{
 	margin-top: -18px;
@@ -1769,7 +1778,7 @@ header.open{
 		right: 0;
 		position: fixed;
 		/* GIO */
-		transform: translateX(100.2%);
+		transform: translateX(100%);
 	}
 	.about{
 		height: calc(500vh - 39px);
