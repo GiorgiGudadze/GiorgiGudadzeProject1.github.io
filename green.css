@@ -203,14 +203,19 @@ transform: translateY(0);
 font-size: 0px;
 display: inline-block;
 margin-left: 15px;
-animation: callOne 0.7s 4.2s ease-out both normal;
 margin-right: 24px;
+}
+#telephone.start{
+	animation: callOne 0.7s 4.2s ease-out both normal;
 }
 #callbackImg,.call-back,#telephone{
 	vertical-align: middle;
 }
 .call-a{
 	display: inline-block;
+}
+
+.call-a.start{
 	animation: callOne 0.7s 4s ease-out both normal;
 }
 
@@ -239,27 +244,27 @@ margin-right: 24px;
 	font-weight: bold;
 
 }
-.lang1{
+.lang1.open{
 	background: #006DA5;
 	color: #fff;
-	animation: boxfill 1s 1.2s both ease-in-out;
+	animation: boxfill 1s 1.6s both ease-in-out;
 }
 
-.lang2{
+.lang2.open{
 	background: rgba(133,215,252,0.9);
 	border-bottom: 2px solid #85D7FC;
-	animation: boxfill 1s 1.4s both ease-in-out;	
+	animation: boxfill 1s 1.8s both ease-in-out;	
 }
-.lang3{
+.lang3.open{
 	
 	background: rgba(133,215,252,0.8);
 	border-bottom: 2px solid #8FD8F9;
-	animation: boxfill 1s 1.6s both ease-in-out;
+	animation: boxfill 1s 2s both ease-in-out;
 }
-.lang4{
+.lang4.open{
 	background: rgba(133,215,252,0.6);
 	border-bottom: 2px solid #7BD6FF;
-	animation: boxfill 1s 1.8s both ease-in-out;
+	animation: boxfill 1s 2.2s both ease-in-out;
 }
 .item-div{
 	overflow: hidden;
@@ -354,17 +359,17 @@ display: inline-block;
 	from{clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%)}
 	to{clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)}
 }
-.l1{
-animation:lPop 0.6s 1.6s both ease-in-out;
-}
-.l2{
-animation:lPop 0.6s 1.8s both ease-in-out;
-}
-.l3{
+.l1.open{
 animation:lPop 0.6s 2s both ease-in-out;
 }
-.l4{
-animation:lPop 0.6s 2.2s both ease-in-out;	
+.l2.open{
+animation:lPop 0.6s 2.2s both ease-in-out;
+}
+.l3.open{
+animation:lPop 0.6s 2.4s both ease-in-out;
+}
+.l4.open{
+animation:lPop 0.6s 2.6s both ease-in-out;	
 }
 @keyframes lPop{
 	from{transform: translateY(100%)}
@@ -422,10 +427,11 @@ display: none;
 	position: relative;
 	overflow: hidden;
 	height: calc(100% - 50px);
+}
+.menu-below.start{
 	transition: 1s;
 	animation:opa 0.5s 1s backwards ;
 }
-
 .main-2{
 	transition: 1s;
 	overflow: hidden;
@@ -668,8 +674,13 @@ animation: callOne 2s 2s ease-out both normal;
 	font-size: 0;
 	overflow-x: hidden;
 	background-color:#F3F3F3;
+	transition: .5s;
+	opacity: 0;
 }
-
+.marq.active{
+	transition-delay: 2s;
+	opacity: 1;
+}
 .static-door,.static-door-container{
 	display: none;
 }
@@ -1624,7 +1635,12 @@ transform: translateY(-50%);
 	transition: .5s ease-in-out;
 	cursor: pointer;
 	display: none;
+	opacity: 0;
   }
+  #nav-icon4.activation{
+	animation:opa 0.5s 1s both;
+  }
+
   #nav-icon4 span {
 	display: block;
 	position: absolute;
@@ -1774,11 +1790,12 @@ header.open{
 	}
 	.menu{
 		display: block;
-		top: 17px;
 		right: 0;
 		position: fixed;
-		/* GIO */
 		transform: translateX(100%);
+		background-color: #fff;
+		top: 0;
+		padding-top: 17px;
 	}
 	.about{
 		height: calc(500vh - 39px);
@@ -1911,6 +1928,7 @@ header.open{
 	}
 }
 @media only screen and (max-width:767px){
+	
 	header{
 		padding-left: 0;
 		padding-right: 0;
@@ -1937,6 +1955,9 @@ header.open{
 		width: 100%;
 		padding-top: 7px;
 		background: #00A8E7;
+	}
+	.call-properties.loaded{
+		animation:opa 0.5s 1s backwards ;
 	}
 	#nav-icon4{
 		position: absolute;

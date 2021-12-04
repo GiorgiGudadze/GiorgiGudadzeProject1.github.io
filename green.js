@@ -1,8 +1,26 @@
 $(function(){
 
-setTimeout(function(){
 $(".white-cover").remove();
-},1000)
+
+$('.l1').addClass('open')
+$('.l2').addClass('open')
+$('.l3').addClass('open')
+$('.l4').addClass('open')
+
+$('.lang1').addClass('open')
+$('.lang2').addClass('open')
+$('.lang3').addClass('open')
+$('.lang4').addClass('open')
+
+$('#nav-icon4').addClass('activation')
+
+$('.menu-below').addClass('start')
+$('.call-a').addClass('start')
+$('#telephone').addClass('start')
+
+
+$('.marq').addClass('active')
+
 
 var languages = document.querySelector(".languages");
 
@@ -34,6 +52,18 @@ var windowWidth = window.innerWidth;
 
 $(".about").hide().delay(3000).slideDown(1000);
 
+if(window.innerWidth<1024){
+	setTimeout(()=>{
+		let tempoHeight = $(document).height();
+		$('.about').css('height',tempoHeight - 39 +'px' )
+	},500)
+	$('.call-properties').addClass('loaded')
+}
+
+else{
+	$('.about').css('height','unset')
+}
+
 $(".slide-cover").hover(function(e){
 	$(".zoom")
 })
@@ -64,7 +94,6 @@ function menuShrink (){
 	$(".logo-title").children().removeClass("active");
 	$(".logo-title-below").children().removeClass("active");
 	$(".menu-show").on("click",function(){
-		console.log("asda");
 		
 	})
 }
@@ -211,6 +240,10 @@ if ($(window).width()<1024){
 window.addEventListener('resize',function(){
 
 	if(window.innerWidth<1024){
+
+			let tempoHeight = $(document).height();
+			$('.about').css('height',tempoHeight - 39 +'px' )
+
 		$("header").css({"transition":"1s"});
 		$(".white-stick").css("top","31.5px");
 		   adresses.appendTo(".footer-information");
@@ -262,6 +295,7 @@ window.addEventListener('resize',function(){
 		
 		
 		else{
+			$('.about').css('height','unset')
 			$(".menu-below").css({"opacity":"1"});
 			adresses.remove();
 			var currentScroll = $(window).scrollTop();
