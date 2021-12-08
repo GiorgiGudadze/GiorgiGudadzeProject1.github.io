@@ -12,7 +12,6 @@ $('.lang2').addClass('open')
 $('.lang3').addClass('open')
 $('.lang4').addClass('open')
 
-$('#nav-icon4').addClass('activation')
 
 $('.menu-below').addClass('start')
 $('.call-a').addClass('start')
@@ -58,6 +57,7 @@ if(window.innerWidth<1024){
 		$('.about').css('height',tempoHeight - 39 +'px' )
 	},500)
 	$('.call-properties').addClass('loaded')
+	$('#nav-icon4').addClass('activation')
 }
 
 else{
@@ -240,9 +240,9 @@ if ($(window).width()<1024){
 window.addEventListener('resize',function(){
 
 	if(window.innerWidth<1024){
-
-			let tempoHeight = $(document).height();
-			$('.about').css('height',tempoHeight - 39 +'px' )
+		$('#nav-icon4').removeClass('activation')
+		let tempoHeight = $(document).height();
+		$('.about').css('height',tempoHeight - 39 +'px' )
 
 		$("header").css({"transition":"1s"});
 		$(".white-stick").css("top","31.5px");

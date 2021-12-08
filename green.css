@@ -102,10 +102,15 @@ margin: auto;
 	font-weight: bold;
 	font-family: 'PT Sans', sans-serif;
 	overflow: hidden;
+	/* max-height: 28px; */
 }
 
 .logo-title p.active{
-transform: translateY(0);
+	transform: translateY(0);
+	-webkit-transform: translateY(0);
+	-moz-transform:translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
 }
 .logo-title-below p.active{
 	opacity: 1;
@@ -116,6 +121,10 @@ transform: translateY(0);
 }
 .logo-title p{
 	transform: translateY(100%);
+	-webkit-transform: translateY(100%);
+	-moz-transform:translateY(100%);
+	-ms-transform: translateY(100%);
+	-o-transform: translateY(100%);
 }
 .logo-title-below p{
 	opacity: 0;
@@ -128,6 +137,7 @@ transform: translateY(0);
 	left: 61px;
 	bottom: 13.5px;
 	overflow: hidden;
+	max-height: 13px;
 }
 .white-stick{
 	position: absolute;
@@ -1635,7 +1645,6 @@ transform: translateY(-50%);
 	transition: .5s ease-in-out;
 	cursor: pointer;
 	display: none;
-	opacity: 0;
   }
   #nav-icon4.activation{
 	animation:opa 0.5s 1s both;
