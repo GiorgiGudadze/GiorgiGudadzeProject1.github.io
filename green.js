@@ -37,11 +37,11 @@ var menuHide = $(this).attr("data-panel");
 $(menuHide).slideToggle(300);
 
 if($(this).find("img").hasClass("active")){
-	$(this).find("img").removeClass("active").css({"margin-bottom":"2px"}).attr("src","plus.png");
+	$(this).find("img").removeClass("active").css({"margin-bottom":"2px"}).attr("src","./photos/plus.png");
 	$(this).css("color","#fff")
 }
 else{
-	$(this).find("img").addClass("active").css({"margin-bottom":"4px"}).attr("src","minus.png");
+	$(this).find("img").addClass("active").css({"margin-bottom":"4px"}).attr("src","./photos/minus.png");
 	$(this).find("img").parent().css("color","#5DC4EB")
 }
 

@@ -95,14 +95,13 @@ margin: auto;
 }
 
 .logo-title{
-	font-size: 22px;
 	position: absolute;
 	left: 59px;
 	top: 11px;
-	font-weight: bold;
 	font-family: 'PT Sans', sans-serif;
+	height: min-content;
 	overflow: hidden;
-	/* max-height: 28px; */
+	max-height: 23px;
 }
 
 .logo-title p.active{
@@ -111,6 +110,7 @@ margin: auto;
 	-moz-transform:translateY(0);
 	-ms-transform: translateY(0);
 	-o-transform: translateY(0);
+	
 }
 .logo-title-below p.active{
 	opacity: 1;
@@ -120,11 +120,15 @@ margin: auto;
 	transition-delay: 3.2s;
 }
 .logo-title p{
-	transform: translateY(100%);
-	-webkit-transform: translateY(100%);
-	-moz-transform:translateY(100%);
-	-ms-transform: translateY(100%);
-	-o-transform: translateY(100%);
+	transform: translateY(110%);
+	-webkit-transform: translateY(110%);
+	-moz-transform:translateY(110%);
+	-ms-transform: translateY(110%);
+	-o-transform: translateY(110%);
+}
+.logo-title p{
+	font-size: 22px;
+	font-weight: bold;
 }
 .logo-title-below p{
 	opacity: 0;
@@ -768,7 +772,7 @@ animation:marqAnime 20s linear both infinite reverse;
 	z-index: 1;
 	cursor: pointer;
 	font-size: 20px;
-	background-image: url("close.png");
+	background-image: url("./photos/close.png");
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -856,14 +860,14 @@ background:#006DA5;
 
 }
 .arrow-L{
-	background-image: url("L-arrow.png");
+	background-image: url("./photos/L-arrow.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 100%;
 	width: 100%;
 }
 .arrow-R{
-	background-image: url("R-arrow.png");
+	background-image: url("./photos/R-arrow.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 100%;
@@ -896,7 +900,7 @@ cursor: pointer;
 }
 .zoom{
 	position: absolute;
-	background-image: url("zoom.png");
+	background-image: url("./photos/zoom.png");
 	background-repeat: no-repeat;
 	width: 29px;
 	height: 29px;
@@ -998,7 +1002,7 @@ animation:boxanime 3.5s 0.6s linear both infinite;
 	width: 100%;
 	height: 100%;
 	position: relative;
-	background-image: url("paraguda.png");
+	background-image: url("./photos/paraguda.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
@@ -1150,7 +1154,7 @@ padding: 0 134px;
 	overflow: hidden;
 }
 #contract-img{
-	background-image: url("contract.jpg");
+	background-image: url("./photos/contract.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -1166,7 +1170,7 @@ padding: 0 134px;
 	grid-column: 3/4;
 }
 #tourism-img{
-	background-image: url("tourism.jpg");
+	background-image: url("./photos/tourism.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -1177,7 +1181,7 @@ padding: 0 134px;
 	transition: 0.5s;
 }
 #construction-img{
-	background-image: url("construction.jpg");
+	background-image: url("./photos/construction.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -1192,7 +1196,7 @@ padding: 0 134px;
 	grid-column: 4/5;
 }
 #food-img{
-	background-image: url("food.jpg");
+	background-image: url("./photos/food.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -1203,7 +1207,7 @@ padding: 0 134px;
 	transition: 0.5s;
 }
 #home-who-img{
-	background-image: url("home.jpg");
+	background-image: url("./photos/home.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -1309,7 +1313,7 @@ padding: 0 134px;
 	color: #ffffff;
 }
 .new1-image{
-	background-image: url(new1.png);
+	background-image: url(./photos/new1.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1334,7 +1338,7 @@ padding: 0 134px;
 	margin-bottom: 15px;
 }
 .new2-image{
-	background-image: url(new2.png);
+	background-image: url(./photos/new2.png);
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 100%;
