@@ -8,6 +8,7 @@ $(window).on('load',()=>{
 	$('.l2').addClass('open')
 	$('.l3').addClass('open')
 	$('.l4').addClass('open')
+	$(".about").hide().delay(3000).slideDown(1000);
 
 	$('.lang1').addClass('open')
 	$('.lang2').addClass('open')
@@ -19,6 +20,10 @@ $(window).on('load',()=>{
 	$('#telephone').addClass('start')
 
 	$('.marq').addClass('active')
+
+	$('.shadow-left').addClass('open')
+	$('.shadow-bottom').addClass('open')
+	
 })
 
 var languages = document.querySelector(".languages");
@@ -48,8 +53,6 @@ else{
 })
 
 var windowWidth = window.innerWidth;
-
-$(".about").hide().delay(3000).slideDown(1000);
 
 if(window.innerWidth<1024){
 	setTimeout(()=>{
