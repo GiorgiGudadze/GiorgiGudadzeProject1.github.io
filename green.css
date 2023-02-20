@@ -6,6 +6,7 @@
 :root{
 	--green: #93C01F;
 }
+
 .white-cover{
 	background-color: #fff;
 	top: 0;
@@ -14,8 +15,59 @@
 	width: 100%;
 	z-index: 99;
 }
+
+.container{
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	display: block;
+}
+
+.loader{
+	width: 100px;
+	height: 100px;
+	position: relative;
+}
+
+.loader::before,
+.loader::after {
+	content: '';
+	position: absolute;
+	height: inherit;
+	width: inherit;
+	border-radius: 50%;
+	mix-blend-mode: multiply;
+	animation: rotate 1s infinite cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.loader::before {
+	background-color: #b2f700;
+}
+
+.loader::after {
+	background-color: #00A8E7;
+	animation-delay: .5s;
+}
+
+@keyframes rotate {
+	0%,
+	100% {
+		left: 95px;
+	}
+	25% {
+		transform: scale(.3);
+	}
+	50% {
+		left: 0;
+	}
+	75% {
+		transform: scale(1);
+	}
+}
+
 body{
 	padding-top: 103px;
+	overflow-y: hidden;
 }
 header{
 	padding-top: 17px;
@@ -68,7 +120,6 @@ margin: auto;
 	margin-top: -29px;
 	margin-bottom: 21px;
 }
-
 
 .tour-all{
 	margin-top: 49px;

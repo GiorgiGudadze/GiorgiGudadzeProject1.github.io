@@ -1,25 +1,25 @@
 $(function(){
 
-$(".white-cover").remove();
+$(window).on('load',()=>{
+	$(".white-cover").remove();	
+	$('body').css('overflow-y', 'unset');
 
-$('.l1').addClass('open')
-$('.l2').addClass('open')
-$('.l3').addClass('open')
-$('.l4').addClass('open')
+	$('.l1').addClass('open')
+	$('.l2').addClass('open')
+	$('.l3').addClass('open')
+	$('.l4').addClass('open')
 
-$('.lang1').addClass('open')
-$('.lang2').addClass('open')
-$('.lang3').addClass('open')
-$('.lang4').addClass('open')
+	$('.lang1').addClass('open')
+	$('.lang2').addClass('open')
+	$('.lang3').addClass('open')
+	$('.lang4').addClass('open')
 
+	$('.menu-below').addClass('start')
+	$('.call-a').addClass('start')
+	$('#telephone').addClass('start')
 
-$('.menu-below').addClass('start')
-$('.call-a').addClass('start')
-$('#telephone').addClass('start')
-
-
-$('.marq').addClass('active')
-
+	$('.marq').addClass('active')
+})
 
 var languages = document.querySelector(".languages");
 
